@@ -9,11 +9,11 @@ find forever families to take them home, but just as many are not so lucky. 2.7
 million dogs and cats are euthanized in the US every year.
 
 Using a dataset of intake information including breed, color, sex, and age from
-the (Austin Animal Center)[http://www.austintexas.gov/department/animal-services],
+the [Austin Animal Center](http://www.austintexas.gov/department/animal-services),
 we're asking Kagglers to predict the outcome for each animal.
 
 We also believe this dataset can help us understand trends in animal outcomes.
 These insights could help shelters focus their energy on specific animals who
 need a little extra help finding a new home. We encourage you to publish your
-insights on (Scripts)[https://www.kaggle.com/c/shelter-animal-outcomes/scripts]
+insights on [Scripts](https://www.kaggle.com/c/shelter-animal-outcomes/scripts)
 so they are publicly accessible.
