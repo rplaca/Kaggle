@@ -8,7 +8,7 @@ Kaggle competitions. I use [Python](http://www.python.org/),
 
 __Getting Started__
 
-- [Titanic: Machine Learning from Disaster](https://github.com/rplaca/Kaggle/tree/master/Titanic%20Machine%20Learning%20from%20Disaster)
+- [Titanic: Machine Learning from Disaster](https://github.com/rplaca/Kaggle/tree/master/Titanic%20-%20Machine%20Learning%20from%20Disaster)
 
 __Playground__
 
