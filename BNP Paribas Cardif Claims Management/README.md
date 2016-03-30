@@ -2,8 +2,9 @@
 
 __Can you accelerate BNP Paribas Cardif's claims management process?__
 
-As a global specialist in personal insurance, BNP Paribas Cardif serves
-90 million clients in 36 countries across Europe, Asia and Latin America.
+As a global specialist in personal insurance,
+[BNP Paribas Cardif](https://www.bnpparibascardif.com/) serves 90 million
+clients in 36 countries across Europe, Asia and Latin America.
 
 In a world shaped by the emergence of new uses and lifestyles, everything
 is going faster and faster. When facing unexpected events, customers expect
@@ -16,8 +17,8 @@ the new needs and expectations of customers.
 In this challenge, BNP Paribas Cardif is providing an anonymized database
 with two categories of claims:
 
-- claims for which approval could be accelerated leading to faster payments
-- claims for which additional information is required before approval
+1. claims for which approval could be accelerated leading to faster payments
+2. claims for which additional information is required before approval
 
 Kagglers are challenged to predict the category of a claim based on features
 available early in the process, helping BNP Paribas Cardif accelerate its
