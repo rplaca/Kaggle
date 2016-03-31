@@ -18,3 +18,4 @@ __Playground__
 __Featured__
 
 - [Santander Customer Satisfaction](https://github.com/rplaca/Kaggle/tree/master/Santander%20Customer%20Satisfaction)
+- [BNP Paribas Cardif Claims Management](https://github.com/rplaca/Kaggle/tree/master/BNP%20Paribas%20Cardif%20Claims%20Management)
