@@ -4,6 +4,7 @@
 ## Exploratory Data Analysis (EDA)
 ## ---------------------------------------------------------
 ## A base predictor using all available features as-is
+## LB Score : 0.68237
 
 from sklearn.ensemble import AdaBoostClassifier
 
