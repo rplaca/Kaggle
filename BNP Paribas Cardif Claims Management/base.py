@@ -5,6 +5,10 @@
 ## ---------------------------------------------------------
 ## A base predictor using all available features as-is
 ## LB Score : 0.68237
+##
+## Removing 17 redundant columns (corr value > 0.95) scores
+## the same so let's keep those out of the data sets.
+## LB Score : 0.68237 
 
 from sklearn.ensemble import AdaBoostClassifier
 
@@ -22,10 +26,18 @@ def convert_to_numeric(df):
     return df
 
 def data():
+    cols = ['v8', 'v33', 'v46', 'v53', 'v54', 'v60', 'v63', 'v64', 'v76',
+            'v89', 'v95', 'v96', 'v105', 'v116', 'v118', 'v121', 'v128']
+
     print "loading train.csv"
     train_df = convert_to_numeric(pd.read_csv("train.csv")).fillna(-1)
+    print "dropping %d columns" % len(cols)
+    train_df = train_df.drop(cols, axis = 1)
+
     print "loading test.csv"
     test_df = convert_to_numeric(pd.read_csv("test.csv")).fillna(-1)
+    print "dropping %d columns" % len(cols)
+    test_df = test_df.drop(cols, axis = 1)
 
     return train_df, test_df
 
@@ -41,8 +53,6 @@ def predict(model, test_df):
     return model.predict_proba(test_df.values[:,1:])
 
 train_df, test_df = data()
-# ID,
-
 submission_df = pd.DataFrame(predict(model(train_df), test_df)[:,1],
                              columns = ['PredictedProb'])
 submission_df.insert(0, 'ID', test_df.values[:,0].astype(int))
