@@ -43,10 +43,18 @@ def model(df):
 def predict(model, df):
     print "predict"
     result =  model.predict_proba(df.values[:,2:])
-    print result[:,1]
     return result[:,1]
 
 train_df, validation_df = data()
-result = log_loss(validation_df.values[:,1].astype(int),
-                  predict(model(train_df), validation_df))
-print result
+
+curr_score = 0
+best_score = 1
+cols = train_df.columns[2:]
+drop = []
+while curr_score < best_score:
+    for col in cols:
+        _train_df = train_df.drop(drop + [col,], axis = 1)
+        _validation_df = validation_df.drop(drop + [col,], axis = 1)
+        result = log_loss(validation_df.values[:,1].astype(int),
+                          predict(model(_train_df), _validation_df))
+        print col, result
