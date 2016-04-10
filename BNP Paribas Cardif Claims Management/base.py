@@ -8,7 +8,11 @@
 ##
 ## Removing 17 redundant columns (corr value > 0.95) scores
 ## the same so let's keep those out of the data sets.
-## LB Score : 0.68237 
+## LB Score : 0.68237
+##
+## Removing 4 noisy columns scores better locally but worse
+## on the Kaggle Leaderboard.
+## LB Score : 0.68382
 
 from sklearn.ensemble import AdaBoostClassifier
 
@@ -28,6 +32,7 @@ def convert_to_numeric(df):
 def data():
     cols = ['v8', 'v33', 'v46', 'v53', 'v54', 'v60', 'v63', 'v64', 'v76',
             'v89', 'v95', 'v96', 'v105', 'v116', 'v118', 'v121', 'v128']
+    cols += ['_v79', '_v110', 'v34', '_v31']
 
     print "loading train.csv"
     train_df = convert_to_numeric(pd.read_csv("train.csv")).fillna(-1)
